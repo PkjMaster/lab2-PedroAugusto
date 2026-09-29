@@ -58,6 +58,7 @@ public class Coisa {
 
         for (int i = 0; i < meusResumos.conta(); i++) {
             System.out.println(resumos[i]);
+
         }
 
 
