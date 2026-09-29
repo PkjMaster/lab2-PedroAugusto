@@ -21,7 +21,7 @@ public class RegistroResumos {
         }
         this.resumos[this.iResumos][0] = tema;
         this.resumos[this.iResumos][1] = conteudo;
-        this.chegouNoMax = false;
+        this.iResumos++;
     }
 
     public String[] pegaResumos() {
@@ -45,7 +45,7 @@ public class RegistroResumos {
         out += "- " + len + " resumo(s) cadastrado(s)\n";
         out += "- ";
         for (int i = 0; i < len; i++){
-            if (i != 0){out += "| ";}
+            if (i != 0){out += " | ";}
             out += this.resumos[i][0];
         }
         return out;

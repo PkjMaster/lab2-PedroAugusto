@@ -40,13 +40,14 @@ public class Disciplina {
         //PROGRAMACAO 2 4 7.0 [5.0, 6.0, 7.0, 10.0]
         String out = this.nome;
         out += " " + this.horasDeEstudo + " " + calcMedia();
-        out += "[";
+        out += " [";
         for (int i = 0; i < 4; i++){
             if (i != 0){
                 out += ", ";
             }
             out += this.notas[i];
         }
+        out += "]";
         return out;
     }
 
