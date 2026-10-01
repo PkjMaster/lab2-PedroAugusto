@@ -36,6 +36,7 @@ public class Disciplina {
         return (media >= 7.0);
     }
 
+    @Override
     public String toString() {
         //PROGRAMACAO 2 4 7.0 [5.0, 6.0, 7.0, 10.0]
         String out = this.nome;
