@@ -28,6 +28,7 @@ public class RegistroTempoOnline {
         return (tempoInvestido >= tempoEsperado);
     }
 
+    @Override
     public String toString() {
         return this.nome + " " + tempoInvestido + "/" + tempoEsperado;
     }
