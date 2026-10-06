@@ -11,8 +11,10 @@ public class RegistroResumos {
     }
 
     public void adiciona (String tema, String conteudo) {
-        this.resumos[this.iResumos%this.resumos.length] = new Resumo(tema, conteudo);
-        this.iResumos++;
+        if (temResumo(tema)) {
+            this.resumos[this.iResumos % this.resumos.length] = new Resumo(tema, conteudo);
+            this.iResumos++;
+        }
     }
 
     public String[] pegaResumos() {

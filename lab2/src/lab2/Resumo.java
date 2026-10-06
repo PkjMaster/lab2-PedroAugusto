@@ -30,7 +30,7 @@ public class Resumo {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Resumo resumo = (Resumo) o;
-        return Objects.equals(tema, resumo.tema) && Objects.equals(conteudo, resumo.conteudo);
+        return Objects.equals(tema, resumo.tema);
     }
 
     @Override
