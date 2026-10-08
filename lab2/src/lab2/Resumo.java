@@ -13,6 +13,7 @@ public class Resumo {
      * O tema do resumo.
      */
     private String tema;
+
     /**
      * O conteudo do resumo.
      */
@@ -21,10 +22,10 @@ public class Resumo {
     /**
      * Constrói um resumo a partir de um tema e seu conteudo.
      *
-     * @param tema o tema do resumo
-     * @param conteudo o conteudo do resumo
+     * @param tema     o tema do resumo
+     * @param conteudo o conteúdo do resumo
      */
-    public Resumo(String tema, String conteudo){
+    public Resumo(String tema, String conteudo) {
         this.tema = tema;
         this.conteudo = conteudo;
     }
@@ -34,16 +35,16 @@ public class Resumo {
      *
      * @return o tema.
      */
-    public String getTema(){
+    public String getTema() {
         return this.tema;
     }
 
     /**
      * Retorna uma String contendo o conteudo.
      *
-     * @return o conteudo.
+     * @return o conteúdo.
      */
-    public String getConteudo(){
+    public String getConteudo() {
         return this.conteudo;
     }
 
@@ -54,29 +55,33 @@ public class Resumo {
      * @return a representação em String de um resumo.
      */
     @Override
-    public String toString(){
+    public String toString() {
         return this.getTema() + ": " + this.getConteudo();
     }
 
     /**
-     * Compara se dois resumos são iguais.
+     * Compara se dois resumos são iguais (tem o mesmo tema).
      *
+     * @param o objeto a ser comparado com o resumo.
      * @return um boolean representando se são ou não iguais.
      */
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
         Resumo resumo = (Resumo) o;
-        return Objects.equals(tema, resumo.tema);
+        return Objects.equals(this.tema, resumo.tema);
     }
 
     /**
-     * Retorna um numero inteiro que representa a identidade do resumo
+     * Retorna o código hash.
      *
-     * @return um numero inteiro que representa a identidade do resumo.
+     * @return código hash do resumo.
      */
     @Override
     public int hashCode() {
-        return Objects.hash(tema, conteudo);
+        return Objects.hash(this.tema);
     }
 }

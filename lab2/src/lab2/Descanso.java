@@ -18,12 +18,17 @@ public class Descanso {
     private int numerosDeSemana;
 
     /**
-     * Constroi a representação do descanso do aluno.
+     * Quantidade mínima de horas de descanso por semana para o aluno estar descansado.
+     */
+    private static final int MIN_DESCANSO = 26;
+
+    /**
+     * Constrói a representação do descanso do aluno.
      *
      */
-    public Descanso (){
-           this.horasDescanso = 0;
-           this.numerosDeSemana = 0;
+    public Descanso() {
+        this.horasDescanso = 0;
+        this.numerosDeSemana = 0;
     }
 
     /**
@@ -31,35 +36,29 @@ public class Descanso {
      *
      * @param valor O valor que será definido como horas de descanso do aluno.
      */
-    public void defineHorasDescanso (int valor) {
+    public void defineHorasDescanso(int valor) {
         this.horasDescanso = valor;
     }
 
     /**
-     * Define o numero de semanas com base no valor passado.
+     * Define o número de semanas com base no valor passado.
      *
-     * @param valor O numero de semanas a ser definido.
+     * @param valor O número de semanas a ser definido.
      */
-    public void defineNumeroSemanas (int valor) {
+    public void defineNumeroSemanas(int valor) {
         this.numerosDeSemana = valor;
     }
 
     /**
-     * Retorna descansado ou cansado com base no Status.
+     * Retorna descansado ou cansado com base no nas horas descansadas relativas ao esperado por semana.
      *
-     * @return Retorna "descansado" ou "cansado" com base no Status.
+     * @return Retorna "descansado" ou "cansado" com base nas horas descansadas relativas ao esperado por semana.
      */
     public String getStatusGeral() {
-        /**
-         * Constante que representa o tanto que deve ter descansado no minimo para não estar cansado.
-         */
-        int HORASDESCANSADO = 26;
-        if (this.horasDescanso != 0 && this.horasDescanso >= HORASDESCANSADO *this.numerosDeSemana){
+        if (this.horasDescanso > 0 && this.horasDescanso >= MIN_DESCANSO * this.numerosDeSemana) {
             return "descansado";
         }
-        else{
-            return "cansado";
-        }
+        return "cansado";
     }
 
 }
