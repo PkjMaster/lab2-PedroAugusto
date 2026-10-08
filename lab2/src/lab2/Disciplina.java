@@ -37,6 +37,12 @@ public class Disciplina {
      */
     private int pesoTotal;
 
+    /**
+     * Constroi a disciplina a partir do nome da disciplina.
+     * Inicializando o maximo de notas = 4, horas de estudo = 0, e os pesos = 1.
+     *
+     * @param nomeDisciplina nome da disciplina.
+     */
     public Disciplina(String nomeDisciplina) {
         this.nome = nomeDisciplina;
         this.MAX_NOTAS = 4;
@@ -51,6 +57,13 @@ public class Disciplina {
         }
     }
 
+    /**
+     * Constroi a disciplina a partir do nome da disciplina e o numero de notas.
+     * Inicializando horas de estudo = 0, e os pesos = 1.
+     *
+     * @param nomeDisciplina nome da disciplina.
+     * @param numNotas o numero maximo de notas que serão recebidas.
+     */
     public Disciplina(String nomeDisciplina, int numNotas){
         this.nome = nomeDisciplina;
         this.MAX_NOTAS = numNotas;
@@ -65,6 +78,14 @@ public class Disciplina {
     }
 
 
+    /**
+     * Constroi a disciplina a partir do nome da disciplina e o numero de notas.
+     * Inicializando horas de estudo.
+     *
+     * @param nomeDisciplina nome da disciplina.
+     * @param numNotas o numero maximo de notas que serão recebidas.
+     * @param pesos uma array de inteiros representando os pesos de cada nota.
+     */
     public Disciplina(String nomeDisciplina, int numNotas, int[] pesos){
         this.nome = nomeDisciplina;
         this.horasDeEstudo = 0;

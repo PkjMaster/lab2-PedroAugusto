@@ -13,14 +13,18 @@ public class Descanso {
     private int horasDescanso;
 
     /**
-     * Constante que representa o tanto que deve ter descansado no minimo para não estar cansado.
-     */
-    private final int HORASDESCANSADO = 26;
-
-    /**
      * Numero de semanas no total
      */
     private int numerosDeSemana;
+
+    /**
+     * Constroi a representação do descanso do aluno.
+     *
+     */
+    public Descanso (){
+           this.horasDescanso = 0;
+           this.numerosDeSemana = 0;
+    }
 
     /**
      * Define o valor de horas de descanso do aluno.
@@ -46,7 +50,11 @@ public class Descanso {
      * @return Retorna "descansado" ou "cansado" com base no Status.
      */
     public String getStatusGeral() {
-        if (this.horasDescanso != 0 && this.horasDescanso >= this.HORASDESCANSADO*this.numerosDeSemana){
+        /**
+         * Constante que representa o tanto que deve ter descansado no minimo para não estar cansado.
+         */
+        int HORASDESCANSADO = 26;
+        if (this.horasDescanso != 0 && this.horasDescanso >= HORASDESCANSADO *this.numerosDeSemana){
             return "descansado";
         }
         else{
